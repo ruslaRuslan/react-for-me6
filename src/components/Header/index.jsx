@@ -1,56 +1,14 @@
 import { NavLink } from "react-router-dom";
+import NavLinkByRuslan from "../NavLinkByRuslan";
 
 function Header() {
   return (
     <nav>
-      <NavLink
-        style={({ isActive }) => {
-          if (isActive) {
-            return {
-              color: "red",
-            };
-          }
-        }}
-        to="/"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        style={({ isActive }) => {
-          if (isActive) {
-            return {
-              color: "red",
-            };
-          }
-        }}
-        to="/about"
-      >
-        About
-      </NavLink>
-      <NavLink
-        style={({ isActive }) => {
-          if (isActive) {
-            return {
-              color: "red",
-            };
-          }
-        }}
-        to="/calculator"
-      >
-        calculator
-      </NavLink>
-      <NavLink
-        style={({ isActive }) => {
-          if (isActive) {
-            return {
-              color: "red",
-            };
-          }
-        }}
-        to="/Users"
-      >
-        Users
-      </NavLink>
+<NavLinkByRuslan title="Home" to="/" />
+<NavLinkByRuslan title="About" to="/about" />
+<NavLinkByRuslan title="calculator" to="/calculator" />
+<NavLinkByRuslan title="Users" to="/users" />
+
     </nav>
   );
 }
