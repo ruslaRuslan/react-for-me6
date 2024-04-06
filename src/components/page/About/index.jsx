@@ -1,10 +1,14 @@
+import Footer from "../../Footer";
+import Header from "../../Header";
 
-const about = ({}) => {
+const About = ({}) => {
   return (
     <div>
-        I'm about page
+      <Header />
+      I'm about page
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default about
+export default About;
