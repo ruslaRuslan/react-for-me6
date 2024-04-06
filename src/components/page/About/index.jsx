@@ -1,13 +1,12 @@
 import Footer from "../../Footer";
 import Header from "../../Header";
+import PageContainer from "../../PageContainer";
 
 const About = ({}) => {
   return (
-    <div>
-      <Header />
+    <PageContainer>
       I'm about page
-      <Footer />
-    </div>
+    </PageContainer>
   );
 };
 
