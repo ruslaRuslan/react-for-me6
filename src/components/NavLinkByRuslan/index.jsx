@@ -1,24 +1,23 @@
 import { NavLink } from "react-router-dom";
 
-const NavLinkByRuslan = ({title, to}) => {
+const style = {
+  color: "red",
+  backgroundColor: "#000",
+};
+
+const NavLinkByRuslan = ({ title, to }) => {
   return (
     <>
-    
-    <NavLink
-        style={({ isActive }) => {
-          if (isActive) {
-            return {
-              color: "red",
-              backgroundColor: '#000'
-            };
-          }
-        }}
+      <NavLink
+        style={({ isActive }) => isActive ? style: null
+            
+        }
         to={to}
       >
-    {title}
+        {title}
       </NavLink>
     </>
-  )
+  );
 };
 
 export default NavLinkByRuslan;
