@@ -14,7 +14,6 @@ const Routing = () => {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/users" element={<Users />} />
         <Route path="/users/1" element={<UserSingle />} />
-
       </Routes>
     </>
   );
