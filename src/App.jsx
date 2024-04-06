@@ -1,13 +1,14 @@
-import { Routes } from "react-router"
+import { Route, Routes } from "react-router";
+import Calculator from "./components/Calculator";
 
 function App() {
 
   return (
     <>
       <Routes>
-        <Routes path="/" element={<div>this is ana seyfe</div>} />
-        <Routes path="/about" />
-        <Routes path="/calculator" element={<Calculator />} />
+        <Route path="/" element={<div>this is ana seyfe</div>} />
+        <Route path="/about" element={<p>about</p>} />
+        <Route path="/calculator" element={<Calculator />} />
 
 
       </Routes>
