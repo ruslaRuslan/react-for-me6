@@ -8,12 +8,7 @@ const style = {
 const NavLinkByRuslan = ({ title, to }) => {
   return (
     <>
-      <NavLink
-        style={({ isActive }) => isActive ? style: null
-            
-        }
-        to={to}
-      >
+      <NavLink style={({ isActive }) => (isActive ? style : null)} to={to}>
         {title}
       </NavLink>
     </>
