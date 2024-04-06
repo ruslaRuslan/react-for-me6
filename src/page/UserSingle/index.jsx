@@ -19,7 +19,7 @@ const UserSingle = ({}) => {
       <div>
         <h1>User Name: {user.name}</h1>
         <h1>UserName: {user.username}</h1>
-        <h1>User SurName: {user.surname}</h1>
+        <h1>User email: {user.email}</h1>
       </div>
     </PageContainer>
   );
