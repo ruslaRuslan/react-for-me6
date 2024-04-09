@@ -1,19 +1,20 @@
 import { useContext } from "react";
 import { FN_Context } from "../../context/FullNameContext";
 import NavLinkByRuslan from "../NavLinkByRuslan";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 function Header() {
   const {ad}= useContext(FN_Context)
+  const [mode, setMode] = useContext(DarkModeContext)
   return (
     <nav>
       <p>xos gelipsen {ad}</p>
       <button
           onClick={() => {
-            setIsDark(!isDark);
-            localStorage.setItem("isDark", !isDark);
+            setMode(mode === 'dark' ? 'light' : 'dark')
           }}
         >
-          {isDark ? "☀" : "🥮"}
+          {mode === 'dark' ? "☀" : "🥮"}
         </button>
       <NavLinkByRuslan title="Home" to="/" />
       <NavLinkByRuslan title="About" to="/about" />
