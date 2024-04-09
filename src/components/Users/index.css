@@ -21,3 +21,9 @@ body{
     background-color: purple !important;
     color: #fff !important;
 }
+
+.blueContainer,
+.blueContainer * {
+    background-color: rgb(73, 185, 229) !important;
+    color: #000 !important;
+}
