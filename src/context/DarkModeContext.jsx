@@ -6,12 +6,18 @@ const DarkModeContextComponent = ({ children }) => {
   const [mode, setMode] = useState("light");
 
   useEffect(() => {
-    setMode(localStorage.getItem('mode'))
+    setMode(localStorage.getItem("mode"));
   }, []);
+
+  const handleModeChange = () => {
+    let newMode = (mode === "dark" ? "light" : "dark")
+    setMode(newMode);
+    localStorage.setItem('mode', newMode)
+  };
 
   return (
     <div className={mode === "dark" ? "darkContainer" : ""}>
-      <DarkModeContext.Provider value={[mode, setMode]}>
+      <DarkModeContext.Provider value={[mode, handleModeChange]}>
         {children}
       </DarkModeContext.Provider>
     </div>

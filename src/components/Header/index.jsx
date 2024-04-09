@@ -5,16 +5,12 @@ import { DarkModeContext } from "../../context/DarkModeContext";
 
 function Header() {
   const { ad } = useContext(FN_Context);
-  const [mode, setMode] = useContext(DarkModeContext);
+  const [mode, handleModeChange] = useContext(DarkModeContext);
   return (
     <nav>
       <p style={{margin: 0}}>xos gelipsen {ad}</p>
       <button
-        onClick={() => {
-          let newMode = (mode === "dark" ? "light" : "dark")
-          setMode(newMode);
-          localStorage.setItem('mode', newMode)
-        }}
+        onClick={handleModeChange}
       >
         {mode === "dark" ? "⚪" : "⚫"}
       </button>
