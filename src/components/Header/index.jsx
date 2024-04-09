@@ -14,7 +14,7 @@ function Header() {
             setMode(mode === 'dark' ? 'light' : 'dark')
           }}
         >
-          {mode === 'dark' ? "☀" : "🥮"}
+          {mode === 'dark' ? "⚪" : "⚫"}
         </button>
       <NavLinkByRuslan title="Home" to="/" />
       <NavLinkByRuslan title="About" to="/about" />
