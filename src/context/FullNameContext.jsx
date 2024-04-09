@@ -10,3 +10,4 @@ const FullNameContext = () => {
         </FN_Context.Provider>
     )
 };
+export default FullNameContext;
