@@ -10,6 +10,8 @@ body{
     color: #fff !important;
 }
 
-.link {
-    color: #000;
+.greenContainer,
+.greenContainer * {
+    background-color: green !important;
+    color: #fff !important;
 }

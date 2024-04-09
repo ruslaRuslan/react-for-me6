@@ -1,27 +1,34 @@
 import { createContext, useEffect, useState } from "react";
 
+const modes = ["light", "dark", "green"];
+const modeClasses = ["", "darkContainer", "greenContainer"];
+
 export const DarkModeContext = createContext("light");
 
 const DarkModeContextComponent = ({ children }) => {
-  const [mode, setMode] = useState("light");
+  const [modeIndex, setModeIndex] = useState(0);
 
   useEffect(() => {
-    setMode(localStorage.getItem("mode"));
+    setModeIndex(+localStorage.getItem("modeIndex") ?? 0);
   }, []);
 
   const handleModeChange = () => {
-    let newMode = mode === "dark" ? "light" : "dark";
-    setMode(newMode);
-    localStorage.setItem("mode", newMode);
+    let newModeIndex = modeIndex + 1;
+    if (newModeIndex >= modes.length) {
+      newModeIndex = 0;
+    }
+    setModeIndex(newModeIndex);
+    localStorage.setItem("modeIndex", newModeIndex);
   };
 
-  const emoji = ()=>{
-    if(mode === "dark") return "⚪"
-    if(mode === "light") return "⚫"
-  }
+  const emoji = () => {
+    if (modes[modeIndex] === "dark") return "⚪";
+    if (modes[modeIndex] === "light") return "⚫";
+    if (modes[modeIndex] === "green") return "🟢";
+  };
 
   return (
-    <div className={mode === "dark" ? "darkContainer" : ""}>
+    <div className={modeClasses[modeIndex]}>
       <DarkModeContext.Provider value={[emoji(), handleModeChange]}>
         {children}
       </DarkModeContext.Provider>
