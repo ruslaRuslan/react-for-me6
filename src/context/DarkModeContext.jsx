@@ -10,14 +10,19 @@ const DarkModeContextComponent = ({ children }) => {
   }, []);
 
   const handleModeChange = () => {
-    let newMode = (mode === "dark" ? "light" : "dark")
+    let newMode = mode === "dark" ? "light" : "dark";
     setMode(newMode);
-    localStorage.setItem('mode', newMode)
+    localStorage.setItem("mode", newMode);
   };
+
+  const emoji = ()=>{
+    if(mode === "dark") return "⚪"
+    if(mode === "light") return "⚫"
+  }
 
   return (
     <div className={mode === "dark" ? "darkContainer" : ""}>
-      <DarkModeContext.Provider value={[mode, handleModeChange]}>
+      <DarkModeContext.Provider value={[emoji(), handleModeChange]}>
         {children}
       </DarkModeContext.Provider>
     </div>

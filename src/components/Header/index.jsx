@@ -5,15 +5,10 @@ import { DarkModeContext } from "../../context/DarkModeContext";
 
 function Header() {
   const { ad } = useContext(FN_Context);
-  const [mode, handleModeChange] = useContext(DarkModeContext);
+  const [emoji, handleModeChange] = useContext(DarkModeContext);
   return (
     <nav>
-      <p style={{margin: 0}}>xos gelipsen {ad}</p>
-      <button
-        onClick={handleModeChange}
-      >
-        {mode === "dark" ? "⚪" : "⚫"}
-      </button>
+      <p style={{ margin: 0 }}>xos gelipsen {ad}</p><button onClick={handleModeChange}> {emoji} </button>
       <NavLinkByRuslan title="Home" to="/" />
       <NavLinkByRuslan title="About" to="/about" />
       <NavLinkByRuslan title="calculator" to="/calculator" />
