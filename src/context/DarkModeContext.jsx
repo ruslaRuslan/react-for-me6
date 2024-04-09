@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
-const modes = ["light", "dark", "green"];
-const modeClasses = ["", "darkContainer", "greenContainer"];
+const modes = ["light", "dark", "green", "purple"];
+const modeClasses = ["", "darkContainer", "greenContainer", "purpleContainer"];
 
 export const DarkModeContext = createContext("light");
 
@@ -25,6 +25,8 @@ const DarkModeContextComponent = ({ children }) => {
     if (modes[modeIndex] === "dark") return "⚪";
     if (modes[modeIndex] === "light") return "⚫";
     if (modes[modeIndex] === "green") return "🟢";
+    if (modes[modeIndex] === "purple") return "🟣";
+
   };
 
   return (
