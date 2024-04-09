@@ -7,10 +7,9 @@ return(
     <>
     
 <DarkModeContext.Provider>
-    
+
 </DarkModeContext.Provider>
 
     </>
 )
 }
-
