@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import NavLinkByRuslan from "../NavLinkByRuslan";
 
-function Header() {
+function Header({ad}) {
+  console.log(ad);
   return (
     <nav>
       <NavLinkByRuslan title="Home" to="/" />
