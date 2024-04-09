@@ -14,5 +14,4 @@ const {email} = useContext(FN_Context)
     </div>
   )
 };
-
 export default Footer;
