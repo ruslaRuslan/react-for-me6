@@ -3,13 +3,12 @@ import { createContext } from "react";
 export const DarkModeContext = createContext("light");
 
 const DarkModeContext = () => {
-return(
+  return (
     <>
-    
-<DarkModeContext.Provider>
+      <DarkModeContext.Provider value="">
 
-</DarkModeContext.Provider>
-
+      </DarkModeContext.Provider>
     </>
-)
-}
+  );
+};
+export default DarkModeContext;
