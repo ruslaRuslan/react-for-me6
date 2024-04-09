@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 const modes = ["light", "dark", "green", "purple"];
 const modeClasses = ["", "darkContainer", "greenContainer", "purpleContainer"];
+const emojies = ["⚫", "⚪", "🟢", "🟣"];
 
 export const DarkModeContext = createContext("light");
 
@@ -21,13 +22,7 @@ const DarkModeContextComponent = ({ children }) => {
     localStorage.setItem("modeIndex", newModeIndex);
   };
 
-  const emoji = () => {
-    if (modes[modeIndex] === "dark") return "⚪";
-    if (modes[modeIndex] === "light") return "⚫";
-    if (modes[modeIndex] === "green") return "🟢";
-    if (modes[modeIndex] === "purple") return "🟣";
-
-  };
+  const emoji = () => emojies[modeIndex];
 
   return (
     <div className={modeClasses[modeIndex]}>
