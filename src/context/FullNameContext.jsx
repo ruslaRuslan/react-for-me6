@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-const FN_Context = createContext({ ad: "", email: "" });
+export const FN_Context = createContext({ ad: "", email: "" });
 
 const data = { ad: "Ruslan", email: "ruslan@gmail.com" };
 
