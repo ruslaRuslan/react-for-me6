@@ -26,7 +26,7 @@ const Users = () => {
             localStorage.setItem("isDark", !isDark);
           }}
         >
-          {isDark ? "☀" : "🥮"}
+          {isDark ? "🔘" : "⚫"}
         </button>
 
         {users?.map((user) => (
