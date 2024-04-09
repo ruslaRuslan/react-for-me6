@@ -4,12 +4,12 @@ import { FN_Context } from "../../context/FullNameContext";
 const Footer = ({}) => {
 
 
-const data = useContext(FN_Context)
-console.log(data);
+const {email} = useContext(FN_Context)
 
 
   return (
     <div style={{ backgroundColor: "red", margin: "20px 0" }}>
+      <p>{email}</p>
     footer
     </div>
   )
