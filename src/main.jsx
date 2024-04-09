@@ -5,9 +5,11 @@ import { BrowserRouter } from "react-router-dom";
 import FullNameContext from "./context/FullNameContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <FullNameContext>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </FullNameContext>
+  <DarkModeContextComponent>
+    <FullNameContext>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </FullNameContext>
+  </DarkModeContextComponent>
 );

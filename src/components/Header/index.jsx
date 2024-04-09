@@ -7,6 +7,14 @@ function Header() {
   return (
     <nav>
       <p>xos gelipsen {ad}</p>
+      <button
+          onClick={() => {
+            setIsDark(!isDark);
+            localStorage.setItem("isDark", !isDark);
+          }}
+        >
+          {isDark ? "☀" : "🥮"}
+        </button>
       <NavLinkByRuslan title="Home" to="/" />
       <NavLinkByRuslan title="About" to="/about" />
       <NavLinkByRuslan title="calculator" to="/calculator" />
