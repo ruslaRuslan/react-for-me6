@@ -4,7 +4,8 @@ import { FN_Context } from "../../context/FullNameContext";
 const Footer = ({}) => {
 
 
-useContext(FN_Context)
+const data = useContext(FN_Context)
+console.log(data);
 
 
   return (
