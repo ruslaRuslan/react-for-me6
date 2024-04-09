@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
-import NavLinkByRuslan from "../NavLinkByRuslan";
 import { useContext } from "react";
 import { FN_Context } from "../../context/FullNameContext";
+import NavLinkByRuslan from "../NavLinkByRuslan";
 
 function Header() {
   const {ad}= useContext(FN_Context)
