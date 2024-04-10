@@ -1,9 +1,14 @@
 import { createContext, useEffect, useState } from "react";
 
 const modes = ["light", "dark", "green", "purple", "blue"];
-const modeClasses = ["", "darkContainer", "greenContainer", "purpleContainer", "blueContainer"];
+const modeClasses = [
+  "",
+  "darkContainer",
+  "greenContainer",
+  "purpleContainer",
+  "blueContainer",
+];
 const emojies = ["⚫", "⚪", "🟢", "🟣", "🔵"];
-
 
 export const DarkModeContext = createContext("light");
 const DarkModeContextComponent = ({ children }) => {
