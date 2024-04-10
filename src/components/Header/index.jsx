@@ -8,7 +8,8 @@ function Header() {
   const [emoji, handleModeChange] = useContext(DarkModeContext);
   return (
     <nav>
-      <p style={{ margin: 0 }}>xos gelipsen {ad}</p><button onClick={handleModeChange}> {emoji} </button>
+      <p style={{ margin: 0 }}>xos gelipsen {ad}</p>
+      <button onClick={handleModeChange}> {emoji} </button>
       <NavLinkByRuslan title="Home" to="/" />
       <NavLinkByRuslan title="About" to="/about" />
       <NavLinkByRuslan title="calculator" to="/calculator" />
