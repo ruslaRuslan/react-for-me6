@@ -7,9 +7,23 @@ body{
 .darkContainer,
 .darkContainer * {
     background-color: black !important;
-    color: red !important;
+    color: #fff !important;
 }
 
-.link {
-    color: #000;
+.greenContainer,
+.greenContainer * {
+    background-color: green !important;
+    color: #fff !important;
+}
+
+.purpleContainer,
+.purpleContainer * {
+    background-color: purple !important;
+    color: #fff !important;
+}
+
+.blueContainer,
+.blueContainer * {
+    background-color: rgb(73, 185, 229) !important;
+    color: #000 !important;
 }
