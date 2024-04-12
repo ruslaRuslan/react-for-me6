@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import PageContainer from "./PageContainer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import PageContainer from "../../components/PageContainer";
 
-const Calculator = ({}) => {
+const Contact = ({}) => {
   const [claculator, setClaculator] = useState(0);
   const [claculator2, setClaculator2] = useState(0);
   return (
@@ -53,4 +53,4 @@ const Calculator = ({}) => {
   );
 };
 
-export default Calculator;
+export default Contact;
